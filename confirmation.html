@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Aroma Shop</title>
+  <title>Aroma - 주문완료</title>
 	<link rel="icon" href="img/Fevicon.png" type="image/png">
   <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
@@ -81,7 +81,7 @@
 		<div class="container h-100">
 			<div class="blog-banner">
 				<div class="text-center">
-					<h1>Order Confirmation</h1>
+					<h1>주문완료</h1>
 					<nav aria-label="breadcrumb" class="banner-breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -99,32 +99,35 @@
     <div class="container">
       <p class="text-center billing-alert">Thank you. Your order has been received.</p>
       <div class="row mb-5">
-        <div class="col-md-6 col-xl-4 mb-4 mb-xl-0">
+
+        <div class="col-md-6 col-xl-6">
           <div class="confirmation-card">
-            <h3 class="billing-title">Order Info</h3>
+            <h3 class="billing-title">주문 정보</h3>
             <table class="order-rable">
               <tr>
-                <td>Order number</td>
+                <td>주문 번호</td>
                 <td>: 60235</td>
               </tr>
               <tr>
-                <td>Date</td>
+                <td>날짜</td>
                 <td>: Oct 03, 2017</td>
               </tr>
               <tr>
-                <td>Total</td>
+                <td>합계</td>
                 <td>: USD 2210</td>
               </tr>
               <tr>
-                <td>Payment method</td>
+                <td>결제 방법</td>
                 <td>: Check payments</td>
               </tr>
             </table>
           </div>
         </div>
-        <div class="col-md-6 col-xl-4 mb-4 mb-xl-0">
+
+
+        <div class="col-md-6 col-xl-6">
           <div class="confirmation-card">
-            <h3 class="billing-title">Billing Address</h3>
+            <h3 class="billing-title">배송지</h3>
             <table class="order-rable">
               <tr>
                 <td>Street</td>
@@ -145,39 +148,17 @@
             </table>
           </div>
         </div>
-        <div class="col-md-6 col-xl-4 mb-4 mb-xl-0">
-          <div class="confirmation-card">
-            <h3 class="billing-title">Shipping Address</h3>
-            <table class="order-rable">
-              <tr>
-                <td>Street</td>
-                <td>: 56/8 panthapath</td>
-              </tr>
-              <tr>
-                <td>City</td>
-                <td>: Dhaka</td>
-              </tr>
-              <tr>
-                <td>Country</td>
-                <td>: Bangladesh</td>
-              </tr>
-              <tr>
-                <td>Postcode</td>
-                <td>: 1205</td>
-              </tr>
-            </table>
-          </div>
-        </div>
+
       </div>
-      <div class="order_details_table">
-        <h2>Order Details</h2>
+      <div class="order_details_table mb-5">
+        <h2>주문 목록</h2>
         <div class="table-responsive">
           <table class="table">
             <thead>
               <tr>
-                <th scope="col">Product</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Total</th>
+                <th scope="col">제품</th>
+                <th scope="col">개수</th>
+                <th scope="col">합계</th>
               </tr>
             </thead>
             <tbody>
@@ -214,31 +195,11 @@
                   <p>$720.00</p>
                 </td>
               </tr>
+              
+              
               <tr>
                 <td>
-                  <h4>Subtotal</h4>
-                </td>
-                <td>
-                  <h5></h5>
-                </td>
-                <td>
-                  <p>$2160.00</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h4>Shipping</h4>
-                </td>
-                <td>
-                  <h5></h5>
-                </td>
-                <td>
-                  <p>Flat rate: $50.00</p>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <h4>Total</h4>
+                  <h4>총합</h4>
                 </td>
                 <td>
                   <h5></h5>
@@ -251,6 +212,14 @@
           </table>
         </div>
       </div>
+
+      <div class="row text-center justify-content-end">
+        <div class="col-3">
+          <a class="button button-paypal" href="category.html">쇼핑 계속하기</a>
+        </div>
+      </div>
+
+
     </div>
   </section>
   <!--================End Order Details Area =================-->
