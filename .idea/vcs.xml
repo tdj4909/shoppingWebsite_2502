@@ -2,5 +2,11 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../Favorites/javascript-study" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../IdeaProjects/untitled4" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../JS-Dino/JS-Dino" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../firstproject" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../java-study" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../jquery-study" vcs="Git" />
   </component>
 </project>
