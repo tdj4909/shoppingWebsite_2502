@@ -46,4 +46,15 @@ public class ArticleService {
         Article updated = articleRepository.save(target);
         return updated;
     }
+
+    public Article delete(Long id) {
+        Article target = articleRepository.findById(id).orElse(null);
+
+        if (target == null){
+            return null;
+        }
+
+        articleRepository.delete(target);
+        return target;
+    }
 }
