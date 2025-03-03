@@ -1,5 +1,6 @@
 package com.example.firstproject.service;
 
+import com.example.firstproject.dto.ArticleForm;
 import com.example.firstproject.entity.Article;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,5 +47,20 @@ class ArticleServiceTest {
 
         assertEquals(expected, article);
 
+    }
+
+    @Test
+    void create_성공_title과_content만_있는_dto_입력() {
+        String title = "라라라라";
+        String content = "4444";
+        ArticleForm dto = new ArticleForm(null, title, content);
+        Article expected = new Article(4L, title, content);
+
+        Article article = articleService.create(dto);
+
+        assertEquals(expected.toString(), article.toString());
+    }
+    @Test
+    void create_실패_id가_포함된_dto_입력() {
     }
 }
