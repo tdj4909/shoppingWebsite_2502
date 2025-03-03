@@ -38,7 +38,13 @@ class ArticleServiceTest {
         assertEquals(expected.toString(), article.toString());
     }
     @Test
-    void show_실패() {
+    void show_실패_존재하지_않는_id_입력() {
+        Long id = -1L;
+        Article expected =  null;
+
+        Article article = articleService.show(id);
+
+        assertEquals(expected, article);
 
     }
 }
