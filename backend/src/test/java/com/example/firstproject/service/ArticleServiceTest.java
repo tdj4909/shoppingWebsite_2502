@@ -62,5 +62,14 @@ class ArticleServiceTest {
     }
     @Test
     void create_실패_id가_포함된_dto_입력() {
+        Long id = 4L;
+        String title = "라라라라";
+        String content = "4444";
+        ArticleForm dto = new ArticleForm(id, title, content);
+        Article expected = null;
+
+        Article article = articleService.create(dto);
+
+        assertEquals(expected, article);
     }
 }
