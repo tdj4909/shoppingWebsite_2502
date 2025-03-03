@@ -5,6 +5,7 @@ import com.example.firstproject.entity.Article;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -50,6 +51,7 @@ class ArticleServiceTest {
     }
 
     @Test
+    @Transactional
     void create_성공_title과_content만_있는_dto_입력() {
         String title = "라라라라";
         String content = "4444";
@@ -60,7 +62,9 @@ class ArticleServiceTest {
 
         assertEquals(expected.toString(), article.toString());
     }
+
     @Test
+    @Transactional
     void create_실패_id가_포함된_dto_입력() {
         Long id = 4L;
         String title = "라라라라";
