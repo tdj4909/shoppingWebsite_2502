@@ -20,7 +20,7 @@ public class CommentApiController {
         return ResponseEntity.status(HttpStatus.OK).body(dtos);
     }
 
-    @PostMapping("/api/atricles/{articleId}/comments")
+    @PostMapping("/api/articles/{articleId}/comments")
     public ResponseEntity<CommentDto> create(@PathVariable Long articleId,
                                              @RequestBody CommentDto dto){
         CommentDto createdDto = commentService.create(articleId, dto);
