@@ -41,6 +41,7 @@ public class CommentService {
 
     @Transactional
     public CommentDto create(Long articleId, CommentDto dto) {
+        System.out.println(dto.getArticleId() + " service");
         Article article = articleRepository.findById(articleId)
                 .orElseThrow(() -> new IllegalArgumentException("댓글 생성 실패! " +
                         "대상 게시글이 없습니다."));

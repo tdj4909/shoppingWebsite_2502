@@ -27,6 +27,7 @@
             articleId: document.querySelector("#new-comment-article-id").value
         };
 
+        console.log(comment);
         console.log("클릭");
         const url = "/api/articles/" + comment.articleId + "/comments";
         fetch(url, {
