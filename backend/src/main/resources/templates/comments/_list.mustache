@@ -76,7 +76,7 @@
     {
         const commentUpdateBtn = document.querySelector("#comment-update-btn");
 
-        commentUpdateBtn.addEvenListener("click", function() {
+        commentUpdateBtn.addEvenListener('click', function() {
 
             const comment = {
                 id: document.querySelector("#edit-comment-id").value,
@@ -104,10 +104,24 @@
         const commentDeleteBtns = document.querySelectorAll(".comment-delete-btn");
 
         commentDeleteBtns.forEach(btn => {
-            btn.addEventListener("click", (event) => {
+            btn.addEventListener('click', (event) => {
                 const commentDeleteBtn = event.target;
                 const commentId = commentDeleteBtn.getAttribute("data-comment-id");
                 console.log(`삭제 버튼 클릭: ${commentId}번 댓글`);
+
+                const url = `/api/comments/${commentId}`;
+                fetch(url, {
+                    method: "DELETE"
+                }).then(response => {
+                    if(!response.ok) {
+                        alert("댓글 삭제 실패..!");
+                        return;
+                    }
+
+                    const msg = `${commentId}번 댓글을 삭제했습니다.`;
+                    alert(msg);
+                    window.location.reload();
+                });
             });
         });
     }
