@@ -99,4 +99,16 @@
             });
         });
     }
+    {
+        const commentDeleteBtn = document.querySelectorAll(".comment-delete-btn");
+
+        commentDeleteBtn.addEventListener("click", function() {
+            console.log("삭제 버튼이 클릭됐습니다.");
+        });
+        commentDeleteBtn.forEach(btn => {
+            btn.addEventListener("click", () => {
+                console.log("삭제 버튼이 클릭됐습니다.");
+            });
+        });
+    }
 </script>
